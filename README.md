@@ -1,2 +1,11 @@
 # Chat-App
-this is a chat app based on python and flask-socketio
+Aplikasi chat berbasis python dengan socket programming.
+
+Library yang dibutuhkan:
+flask
+flask-socketio
+
+instalasi:
+```
+pip install -r requirements.txt 
+```
