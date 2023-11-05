@@ -11,3 +11,5 @@ Library utama yang digunakan:
 ```
 pip install -r requirements.txt 
 ```
+
+credit: https://youtu.be/mkXdvs8H7TA
