@@ -1,4 +1,4 @@
-# Chat-App
+# BincangIn
 Aplikasi chat berbasis python dan javascript dengan socket programming. Aplikasi ini memiliki room private dan public, serta dijalankan secara lokal pada alamat `127.0.0.1`
 
 Library utama yang digunakan:
