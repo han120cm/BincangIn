@@ -4,10 +4,10 @@ import random
 from string import ascii_uppercase
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "asdasdasd"
+app.config["SECRET_KEY"] = "secret"
 socketio = SocketIO(app)
 
-rooms = {"public": {"members": 0, "messages": []}}
+rooms = {"Public": {"members": 0, "messages": []}}
 def generate_unique_code(length):
     while True:
         code = ""
@@ -35,7 +35,7 @@ def home():
 
         room = code
         if public != False:
-            code = "public"
+            code = "Public"
             room = code         
         if create != False:
             room = generate_unique_code(4)
@@ -90,11 +90,12 @@ def connect(auth):
         return
     
     if public != False:
-        join_room("public")
-        send({"name": name, "message": "has entered the room"}, to="public")
-        rooms["public"]["members"] += 1
-        print(f"{name} joined the public room")
+        join_room("Public")
+        send({"name": name, "message": "has entered the room"}, to="Public")
+        rooms["Public"]["members"] += 1
+        print(f"{name} joined the Public room")
         print(rooms)
+        
         
     else:
         join_room(room)
@@ -102,7 +103,7 @@ def connect(auth):
         rooms[room]["members"] += 1
         print(f"{name} joined the room {room}")
         print(rooms)
-
+        
 @socketio.on("disconnect")
 def disconnect():
     room = session.get("room")
@@ -111,7 +112,7 @@ def disconnect():
 
     if room in rooms:
         rooms[room]["members"] -= 1
-        if room == "public":
+        if room == "Public":
             pass
         elif rooms[room]["members"] <= 0:
             del rooms[room]
