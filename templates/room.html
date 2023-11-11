@@ -57,6 +57,11 @@
         }
     });
 
+    function updateScroll() {
+        var element = document.getElementById("messages");
+        element.scrollTop = element.scrollHeight;
+    }
+    setInterval(updateScroll, 100);
 </script>
 {% for msg in messages %}
 <script type="text/javascript">
