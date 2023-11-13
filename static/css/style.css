@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     .home {
         display: flex;
         flex-direction: row;
@@ -50,6 +50,16 @@ body {
         box-sizing: border-box;
     }
 
+    input[type=ntext] {
+        width: 325.84px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
     button[type=submit] {
         width: 100%;
         background-color: rgb(92, 92, 226);
@@ -67,17 +77,9 @@ body {
         width: 100%;
     }
     
-    .create-btn {
-        width: 100%;
-    }
-    
-    .public-btn {
-        width: 100%;
-    }
-    
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .home {
         display: flex;
         flex-direction: column;
@@ -108,8 +110,18 @@ body {
         box-sizing: border-box;
     }
 
+    input[type=ntext] {
+        width: 325.84px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
     button[type=submit] {
-        width: 100%;
+        width: 325.84px;
         background-color: rgb(92, 92, 226);
         color: white;
         padding: 14px 20px;
@@ -122,17 +134,10 @@ body {
     .join {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 325.84px;
         align-items: center;
     }
     
-    .create-btn {
-        width: 100%;
-    }
-    
-    .public-btn {
-        width: 100%;
-    }
 }
 
 
@@ -161,13 +166,6 @@ body {
     width: 97%;
     align-items: center;
 }
-
-/*
-.inputs {
-    padding: 10px;
-    display: flex;
-}
-*/
 
 h2 {
     text-align: center;
