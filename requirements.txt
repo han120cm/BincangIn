@@ -1,4 +1,0 @@
-flask
-flask-socketio
-opencv2
-test
